@@ -1,0 +1,563 @@
+2026-02-17 17:18:57,340 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 17:19:02,295 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-17 17:19:02,336 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-17 17:19:04,777 ERROR src.vector_store - Failed to load FAISS at data/vector_dbs/my_vector_db6
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 82, in load_faiss
+    return FAISS.load_local(index_path, emb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1190, in load_local
+    raise ValueError(
+ValueError: The de-serialization relies loading a pickle file. Pickle files can be modified to deliver a malicious payload that results in execution of arbitrary code on your machine.You will need to set `allow_dangerous_deserialization` to `True` to enable deserialization. If you do this, make sure that you trust the source of the data. For example, if you are loading a file that you created, and know that no one else has modified the file, then this is safe to do. Do not set this to `True` if you are loading a file from an untrusted source (e.g., some random site on the internet.).
+2026-02-17 17:19:07,256 ERROR src.agents.generator - LLM generation failed
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\generator.py", line 26, in generate_answer
+    return llm(prompt)
+           ^^^^^^^^^^^
+TypeError: 'OpenAI' object is not callable
+2026-02-17 17:19:25,212 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 17:23:28,682 WARNING pypdf._reader - Object ID 534,0 ref repaired
+2026-02-17 17:23:31,886 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 17:23:32,880 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 17:23:33,029 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 17:23:33,848 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 17:23:36,977 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-17 17:23:37,008 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-17 17:27:16,067 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 17:27:20,792 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-17 17:27:20,816 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-17 17:29:48,834 ERROR src.vector_store - Failed to load FAISS at data/vector_dbs/my_vector_db2
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 85, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-17 17:29:50,730 INFO httpx - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 401 Unauthorized"
+2026-02-17 17:29:50,733 ERROR src.agents.generator - LLM generation failed
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\generator.py", line 29, in generate_answer
+    res = llm.generate([prompt])
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1011, in generate
+    return self._generate_helper(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 815, in _generate_helper
+    self._generate(
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_openai\llms\base.py", line 492, in _generate
+    response = self.client.create(prompt=_prompts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\resources\completions.py", line 541, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: 7ogvVYRW************************************************************************rqoE. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2026-02-17 17:58:46,958 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 17:58:51,699 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-17 17:58:51,729 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-17 18:58:24,823 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 18:58:26,280 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 18:58:29,652 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-17 18:58:30,012 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-17 20:05:01,858 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 20:05:07,124 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-17 20:05:07,159 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-17 20:32:05,746 INFO src.vector_store - Creating vector store at data\uploads\my_vector\index for initial chunk...
+2026-02-17 20:34:48,283 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 20:35:58,134 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 20:38:53,723 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 20:43:48,223 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-17 20:43:52,407 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-17 20:43:54,632 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-18 14:53:57,129 INFO src.vector_store - Creating vector store at data\uploads\my_vector_db\index for initial chunk...
+2026-02-18 14:56:35,341 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 14:57:56,985 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 14:59:01,410 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 15:02:00,196 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 15:02:11,404 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-18 15:02:13,520 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-18 15:07:46,311 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 15:08:49,031 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 15:13:15,267 INFO src.vector_store - Creating vector store at data\uploads\my_vector_db2\index for initial chunk...
+2026-02-18 15:13:21,698 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 15:13:26,419 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-18 15:13:26,543 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-18 15:14:12,805 ERROR src.vector_store - Failed to load FAISS vector store at data/vector_dbs/my_vector_db2: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 228, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-18 15:14:15,845 ERROR src.agents.generator - LLM generation failed
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\generator.py", line 36, in generate_answer
+    res = llm.generate([prompt])
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1011, in generate
+    return self._generate_helper(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 815, in _generate_helper
+    self._generate(
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_openai\llms\base.py", line 492, in _generate
+    response = self.client.create(prompt=_prompts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: Completions.create() got an unexpected keyword argument 'deployment'
+2026-02-18 15:20:35,041 INFO openai._base_client - Retrying request to /embeddings in 0.495974 seconds
+2026-02-18 15:20:41,083 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 15:21:49,895 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 15:22:29,133 INFO src.vector_store - Creating vector store at data\uploads\my_vector_db1\index for initial chunk...
+2026-02-18 15:22:34,605 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 15:22:39,445 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-18 15:22:40,169 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-18 15:23:01,829 INFO openai._base_client - Retrying request to /embeddings in 0.435851 seconds
+2026-02-18 15:23:11,678 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 15:25:40,270 ERROR src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db1: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 231, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-18 15:25:40,286 INFO src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db1\index.pkl
+2026-02-18 15:25:40,286 ERROR src.vector_store - Failed to load fallback index.pkl at data/vector_dbs/my_vector_db1\index.pkl
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 231, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 253, in load_faiss
+    return FallbackIndex(docs)
+           ^^^^^^^^^^^^^
+NameError: name 'FallbackIndex' is not defined
+2026-02-18 15:25:40,290 ERROR src.vector_store - No fallback persisted index found at data/vector_dbs/my_vector_db1; returning None
+2026-02-18 15:25:43,676 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/completions?api-version=2024-12-01-preview "HTTP/1.1 400 Bad Request"
+2026-02-18 15:25:43,682 ERROR src.agents.generator - LLM generation failed
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\generator.py", line 45, in generate_answer
+    res = llm.generate([prompt])
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1011, in generate
+    return self._generate_helper(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 815, in _generate_helper
+    self._generate(
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_openai\llms\base.py", line 492, in _generate
+    response = self.client.create(prompt=_prompts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\resources\completions.py", line 541, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'code': 'OperationNotSupported', 'message': 'The completion operation does not work with the specified model, gpt-5-mini. Please choose different model and try again. You can learn more about which models can be used with each operation here: https://go.microsoft.com/fwlink/?linkid=2197993.'}}
+2026-02-18 16:07:17,959 INFO src.vector_store - Creating vector store at data\uploads\my_vector_db9\index for initial chunk...
+2026-02-18 16:07:22,883 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 16:07:27,429 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-18 16:07:27,849 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-18 16:08:26,164 ERROR src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db9: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 231, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-18 16:08:26,167 INFO src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db9\index.pkl
+2026-02-18 16:08:26,167 ERROR src.vector_store - Failed to load fallback index.pkl at data/vector_dbs/my_vector_db9\index.pkl
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 231, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 253, in load_faiss
+    return FallbackIndex(docs)
+           ^^^^^^^^^^^^^
+NameError: name 'FallbackIndex' is not defined
+2026-02-18 16:08:26,170 ERROR src.vector_store - No fallback persisted index found at data/vector_dbs/my_vector_db9; returning None
+2026-02-18 16:08:29,573 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/completions?api-version=2024-12-01-preview "HTTP/1.1 400 Bad Request"
+2026-02-18 16:08:29,575 ERROR src.agents.generator - LLM generation failed
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\generator.py", line 45, in generate_answer
+    res = llm.generate([prompt])
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1011, in generate
+    return self._generate_helper(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 815, in _generate_helper
+    self._generate(
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_openai\llms\base.py", line 492, in _generate
+    response = self.client.create(prompt=_prompts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\resources\completions.py", line 541, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'code': 'OperationNotSupported', 'message': 'The completion operation does not work with the specified model, gpt-5-mini. Please choose different model and try again. You can learn more about which models can be used with each operation here: https://go.microsoft.com/fwlink/?linkid=2197993.'}}
+2026-02-18 16:14:36,956 INFO src.vector_store - Creating vector store at data\uploads\my_vector_db8\index for initial chunk...
+2026-02-18 16:14:48,449 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 16:14:53,238 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-18 16:14:53,259 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-18 16:18:55,931 ERROR src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db8: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-18 16:18:55,934 INFO src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db8\index.pkl
+2026-02-18 16:18:57,422 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/completions?api-version=2024-12-01-preview "HTTP/1.1 400 Bad Request"
+2026-02-18 16:18:57,425 ERROR src.agents.grader - LLM grader failed; falling back to heuristic
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\grader.py", line 73, in grade_chunks
+    res = llm.generate([prompt])
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1011, in generate
+    return self._generate_helper(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 815, in _generate_helper
+    self._generate(
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_openai\llms\base.py", line 492, in _generate
+    response = self.client.create(prompt=_prompts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\resources\completions.py", line 541, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'code': 'OperationNotSupported', 'message': 'The completion operation does not work with the specified model, gpt-5-mini. Please choose different model and try again. You can learn more about which models can be used with each operation here: https://go.microsoft.com/fwlink/?linkid=2197993.'}}
+2026-02-18 16:18:58,942 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/completions?api-version=2024-12-01-preview "HTTP/1.1 400 Bad Request"
+2026-02-18 16:18:58,944 ERROR src.agents.generator - LLM generation failed; attempting chat-completion fallback
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\generator.py", line 46, in generate_answer
+    res = llm.generate([prompt])
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1011, in generate
+    return self._generate_helper(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 815, in _generate_helper
+    self._generate(
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_openai\llms\base.py", line 492, in _generate
+    response = self.client.create(prompt=_prompts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\resources\completions.py", line 541, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'code': 'OperationNotSupported', 'message': 'The completion operation does not work with the specified model, gpt-5-mini. Please choose different model and try again. You can learn more about which models can be used with each operation here: https://go.microsoft.com/fwlink/?linkid=2197993.'}}
+2026-02-18 16:18:58,948 ERROR src.agents.generator - Chat-completion fallback failed
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\generator.py", line 46, in generate_answer
+    res = llm.generate([prompt])
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 1011, in generate
+    return self._generate_helper(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\llms.py", line 815, in _generate_helper
+    self._generate(
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_openai\llms\base.py", line 492, in _generate
+    response = self.client.create(prompt=_prompts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\resources\completions.py", line 541, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'code': 'OperationNotSupported', 'message': 'The completion operation does not work with the specified model, gpt-5-mini. Please choose different model and try again. You can learn more about which models can be used with each operation here: https://go.microsoft.com/fwlink/?linkid=2197993.'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\generator.py", line 70, in generate_answer
+    resp = openai.ChatCompletion.create(model=deployment, messages=messages, temperature=0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\lib\_old_api.py", line 39, in __call__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2026-02-18 16:24:49,938 INFO src.vector_store - Creating vector store at data\uploads\my_vector_db1\index for initial chunk...
+2026-02-18 16:24:56,017 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 16:25:02,864 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-18 16:25:02,888 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-18 16:25:50,209 ERROR src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db1: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-18 16:25:50,214 INFO src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db1\index.pkl
+2026-02-18 16:25:50,693 ERROR src.agents.grader - LLM grader failed; falling back to heuristic
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\grader.py", line 72, in grade_chunks
+    res = llm.generate([prompt])
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 913, in generate
+    _format_for_tracing(message_list) for message_list in messages
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 131, in _format_for_tracing
+    if isinstance(message.content, list):
+                  ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'content'
+2026-02-18 16:25:51,088 ERROR src.agents.generator - LLM generation failed; attempting chat-completion fallback
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\generator.py", line 46, in generate_answer
+    res = llm.generate([prompt])
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 913, in generate
+    _format_for_tracing(message_list) for message_list in messages
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 131, in _format_for_tracing
+    if isinstance(message.content, list):
+                  ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'content'
+2026-02-18 16:25:52,416 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 400 Bad Request"
+2026-02-18 16:25:52,419 ERROR src.agents.generator - Chat-completion fallback failed
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\agents\generator.py", line 75, in generate_answer
+    resp = client.chat.completions.create(model=deployment, messages=messages, temperature=0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1192, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+2026-02-18 16:31:37,938 INFO src.vector_store - Creating vector store at data\uploads\my_vector_db2\index for initial chunk...
+2026-02-18 16:31:42,590 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 16:31:47,228 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-18 16:31:47,251 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-18 16:32:39,925 ERROR src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db2: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-18 16:32:39,927 INFO src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db2\index.pkl
+2026-02-18 16:32:43,695 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 16:32:51,561 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 16:33:10,220 ERROR src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db2: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-18 16:33:10,222 INFO src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db2\index.pkl
+2026-02-18 16:33:15,636 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 16:33:22,540 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 16:34:04,216 ERROR src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db2: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-18 16:34:04,218 INFO src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db2\index.pkl
+2026-02-18 16:34:07,172 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 16:34:13,597 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 16:37:27,878 ERROR src.vector_store - Index path does not exist: data/vector_dbs/my_vector_db
+2026-02-18 16:37:38,678 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 17:07:38,230 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-18 17:07:38,247 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-18 17:07:38,260 ERROR src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db2: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-18 17:07:38,265 INFO src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db2\index.pkl
+2026-02-18 17:07:43,006 ERROR src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db2: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-18 17:07:43,009 INFO src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db2\index.pkl
+2026-02-18 17:07:48,481 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-18 17:07:54,963 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 12:52:51,142 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-19 12:52:51,315 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-19 12:52:51,344 ERROR src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db2: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-19 12:52:51,347 INFO src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db2\index.pkl
+2026-02-19 12:52:56,202 ERROR src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db2: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-19 12:52:56,204 INFO src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db2\index.pkl
+2026-02-19 12:53:01,912 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 12:53:08,463 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 16:25:12,439 INFO src.vector_store - Creating vector store at data\uploads\my_vector_db3\index for initial chunk...
+2026-02-19 16:25:17,240 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 16:25:27,032 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-19 16:25:27,069 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-19 16:26:02,478 ERROR multi_agentic_crag.src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db3: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-19 16:26:02,507 INFO multi_agentic_crag.src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db3\index.pkl
+2026-02-19 16:26:09,360 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 16:32:32,416 INFO src.vector_store - Creating vector store at data\uploads\my_vector_db1\index for initial chunk...
+2026-02-19 16:32:43,811 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 16:32:58,793 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-19 16:32:58,820 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-19 16:33:44,141 ERROR multi_agentic_crag.src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db1: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-19 16:33:44,144 INFO multi_agentic_crag.src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db1\index.pkl
+2026-02-19 16:33:48,196 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 16:34:22,844 ERROR multi_agentic_crag.src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db1: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-19 16:34:22,846 INFO multi_agentic_crag.src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db1\index.pkl
+2026-02-19 16:34:24,634 ERROR multi_agentic_crag.src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db1: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-19 16:34:24,635 INFO multi_agentic_crag.src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db1\index.pkl
+2026-02-19 16:34:26,108 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 16:34:27,794 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 17:04:05,026 INFO src.vector_store - Creating vector store at data\uploads\my_vector_db4\index for initial chunk...
+2026-02-19 17:04:10,148 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 17:04:21,870 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-19 17:04:21,900 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-19 17:04:29,891 ERROR multi_agentic_crag.src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db4: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-19 17:04:29,893 INFO multi_agentic_crag.src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db4\index.pkl
+2026-02-19 17:04:36,771 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 17:04:46,088 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 18:00:00,109 INFO multi_agentic_crag.src.vector_store - Creating vector store at data\uploads\my_vector_db3\index for initial chunk...
+2026-02-19 18:00:05,326 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 18:00:16,539 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-19 18:00:16,570 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
+2026-02-19 18:01:32,719 ERROR multi_agentic_crag.src.vector_store - FAISS.load_local failed at data/vector_dbs/my_vector_db3: too many values to unpack (expected 2). Attempting fallback to persisted docs/index files.
+Traceback (most recent call last):
+  File "C:\Users\Komal\OneDrive\Desktop\Vibe Coding\multi_agentic_crag\src\vector_store.py", line 255, in load_faiss
+    return FAISS.load_local(index_path, emb, allow_dangerous_deserialization=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Komal\OneDrive\Desktop\Vibe Coding\.venv\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 1209, in load_local
+    (
+ValueError: too many values to unpack (expected 2)
+2026-02-19 18:01:32,721 INFO multi_agentic_crag.src.vector_store - Loaded fallback index.pkl from data/vector_dbs/my_vector_db3\index.pkl
+2026-02-19 18:01:39,228 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 18:01:47,419 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 18:12:15,004 INFO multi_agentic_crag.src.vector_store - Creating vector store at data\uploads\my_vector_db\index for initial chunk...
+2026-02-19 18:12:23,130 INFO httpx - HTTP Request: POST https://chikoai.cognitiveservices.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2026-02-19 18:12:37,080 INFO faiss.loader - Loading faiss with AVX2 support.
+2026-02-19 18:12:37,183 INFO faiss.loader - Successfully loaded faiss with AVX2 support.
