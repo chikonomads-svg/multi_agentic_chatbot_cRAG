@@ -1,4 +1,0 @@
-# Simple code style rules for Cline
-max-line-length: 120
-indent-size: 4
-require-type-hints: true

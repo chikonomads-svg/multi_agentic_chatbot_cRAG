@@ -1,0 +1,11 @@
+langchain
+faiss-cpu
+streamlit
+tavily-python
+plotly
+pandas
+pypdf
+docx2txt
+pytest
+pytest-cov
+openai

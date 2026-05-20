@@ -1,0 +1,11 @@
+langchain>=0.0.200
+langgraph>=0.1.0
+faiss-cpu
+openai
+tavily-python
+python-dotenv
+streamlit>=1.28.0
+plotly
+pandas
+pytest
+typing-extensions

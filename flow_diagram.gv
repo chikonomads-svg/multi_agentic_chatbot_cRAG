@@ -1,0 +1,14 @@
+digraph LangraphFlow {
+	router
+	START -> router
+	retriever
+	START -> retriever
+	grader
+	START -> grader
+	web_search
+	START -> web_search
+	analyst
+	START -> analyst
+	generator
+	START -> generator
+}
